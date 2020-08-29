@@ -5,19 +5,9 @@ import ContactFilter from './ContactFilter';
 import Section from './Section';
 import Notification from './Notification';
 import { v4 as uuidv4 } from 'uuid';
-// import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types'; is not necessary here(look at prev hw2)
 
 export default class App extends Component {
-  // static defaultProps = {
-  //   contacts: [],
-  //   filter: '',
-  // };
-
-  // static propTypes = {
-  //   contacts: PropTypes.array.isRequired,
-  //   filter: PropTypes.string.isRequired,
-  // };
-
   state = {
     contacts: [],
     filter: '',
@@ -34,7 +24,7 @@ export default class App extends Component {
   }
   componentDidUpdate(prevProps, prevState) {
     if (prevState.contacts !== this.state.contacts) {
-      localStorage.getItem('contacts', JSON.stringify(this.state.contacts));
+      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
     }
   }
 
