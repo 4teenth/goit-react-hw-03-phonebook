@@ -5,22 +5,22 @@ import ContactFilter from './ContactFilter';
 import Section from './Section';
 import Notification from './Notification';
 import { v4 as uuidv4 } from 'uuid';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 export default class App extends Component {
-  static defaultProps = {
-    contacts: [],
-    filter: '',
-  };
+  // static defaultProps = {
+  //   contacts: [],
+  //   filter: '',
+  // };
 
-  static propTypes = {
-    contacts: PropTypes.array.isRequired,
-    filter: PropTypes.string.isRequired,
-  };
+  // static propTypes = {
+  //   contacts: PropTypes.array.isRequired,
+  //   filter: PropTypes.string.isRequired,
+  // };
 
   state = {
-    contacts: this.props.contacts,
-    filter: this.props.filter,
+    contacts: [],
+    filter: '',
   };
 
   componentDidMount() {

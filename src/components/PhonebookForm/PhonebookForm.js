@@ -6,20 +6,20 @@ import styles from './PhonebookForm.module.css';
 const { form, input, inputLabel, addBtn } = styles;
 
 export default class PhonebookForm extends Component {
-  static defaultProps = {
-    name: '',
-    number: '',
-  };
+  // static defaultProps = {
+  //   name: '',
+  //   number: '',
+  // };
 
   static propTypes = {
-    name: PropTypes.string.isRequired,
-    number: PropTypes.string.isRequired,
+    // name: PropTypes.string.isRequired,
+    // number: PropTypes.string.isRequired,
     onAddContact: PropTypes.func.isRequired,
   };
 
   state = {
-    name: this.props.name,
-    number: this.props.number,
+    name: '',
+    number: '',
   };
 
   nameId = shortid.generate();
